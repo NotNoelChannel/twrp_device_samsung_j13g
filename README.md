@@ -1,8 +1,8 @@
-# TWRP tree for Samsung Galaxy J1 (J100H) by CTXz
+# TWRP tree for Samsung Galaxy J1 (2015)
 
-Team Win Recovery Project device tree for the Galaxy J1 (J100H)
+Team Win Recovery Project device tree for the Galaxy J1 (2015)
 
-By CTXz
+By NotNoelChannel [notnoel]
 
 
 
