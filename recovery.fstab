@@ -1,0 +1,8 @@
+/boot		    emmc   /dev/block/platform/sprd-sdhci.3/by-name/KERNEL	               flags=backup=1;display="Boot"
+/cache		    ext4   /dev/block/platform/sprd-sdhci.3/by-name/CSC                flags=backup=1;display="Cache"
+/data		    ext4   /dev/block/platform/sprd-sdhci.3/by-name/userdata             length=-16384
+/recovery	    emmc   /dev/block/platform/sprd-sdhci.3/by-name/RECOVERY             flags=backup=1;display="Recovery"
+/efs		    ext4   /dev/block/platform/sprd-sdhci.3/by-name/efs                  flags=backup=1;display="EFS"
+/system		    ext4   /dev/block/platform/sprd-sdhci.3/by-name/system            flags=backup=1;display="System"
+/st.mirco.sd	vfat   /dev/block/mmcblk1p1                      flags=display="Micro SD";storage;removable
+/productinfo	ext4   /dev/block/platform/sprd-sdhci.3/by-name/prodnv               flags=backup=1;subpartitionof=/wfixnv1
