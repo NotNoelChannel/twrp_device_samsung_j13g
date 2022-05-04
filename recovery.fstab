@@ -8,6 +8,6 @@
 /preload      ext4	 /dev/block/platform/sprd-sdhci.3/by-name/HIDDEN			 flags=backup=1;display="Preload"
 /productinfo  ext4	 /dev/block/platform/sprd-sdhci.3/by-name/prodnv			 flags=backup=1;display="Product Info"
 /modemcp      emmc	 /dev/block/platform/sprd-sdhci.3/by-name/MODEM			   flags=backup=1;display="ModemCP"
-/modemdsp     emmc	 /dev/block/platform/sprd-sdhci.3/by-name/WDSP			   flags=backup=1;display="ModemCP"
+/modemdsp     emmc	 /dev/block/platform/sprd-sdhci.3/by-name/WDSP			   flags=backup=1;display="WDSP"
 
 
