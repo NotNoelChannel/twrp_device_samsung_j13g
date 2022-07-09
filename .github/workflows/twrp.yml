@@ -1,4 +1,4 @@
-name: TWRP CI (j3xn)
+name: TWRP CI for SM-J100H (CM-13.0)
 
 on:
   workflow_dispatch:
@@ -31,9 +31,9 @@ jobs:
         cd ~/TWRP
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-        python3 ~/.bin/repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-5.1
-        git clone --branch twrp-5.1 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_j13g.git ~/TWRP/device/samsung/j13g
-        git clone --branch cm-12.1 --single-branch https://github.com/NotNoelChannel/android_kernel_samsung_j13g.git ~/TWRP/kernel/samsung/j13g
+        python3 ~/.bin/repo init --depth=1 -u https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-6.0
+        git clone --branch twrp-6.0 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_j13g.git ~/TWRP/device/samsung/j13g
+        git clone --branch cm-13.0 --single-branch https://github.com/NotNoelChannel/android_kernel_samsung_j13g.git ~/TWRP/kernel/samsung/j13g
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - name: Building TWRP
       run: |
@@ -52,9 +52,9 @@ jobs:
     - name: Converting TWRP recovery.img to recovery.tar
       run: |
           cd ~/TWRP/out/target/product/j13g
-          tar -cvf twrp-3.6.1-9.0-latest.tar recovery.img
+          tar -cvf twrp-3.6.2-9.0-latest.tar recovery.img
     - name: Uploading TWRP builds
       uses: actions/upload-artifact@v2
       with:
         name: twrp
-        path: /home/runner/TWRP/out/target/product/j13g/twrp-3.6.1-9.0-latest.tar
+        path: /home/runner/TWRP/out/target/product/j13g/twrp-3.6.2-9.0-latest.tar
