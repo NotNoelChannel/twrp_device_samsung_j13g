@@ -22,7 +22,11 @@ jobs:
         cd ~/.jdk_7
         axel -q -n $(nproc --all) https://download.java.net/openjdk/jdk7u75/ri/openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz
         tar -xzf openjdk-7u75-b13-linux-x64-18_dec_2014.tar.gz
-        sudo ln -f -s /usr/bin/python2.7 /usr/bin/python
+        ls /usr/bin/python*
+        sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 1
+        sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+        sudo update-alternatives --list python
+        python -V
     - name: Syncing OFRP sources
       run: |
         mkdir ~/TWRP
