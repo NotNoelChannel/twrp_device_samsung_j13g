@@ -6,10 +6,8 @@ TARGET_CPU_ABI                  := armeabi-v7a
 TARGET_CPU_ABI2                 := armeabi
 TARGET_ARCH_VARIANT             := armv7-a-neon
 TARGET_CPU_VARIANT              := cortex-a7
-TARGET_CPU_SMP                  := true
-ARCH_ARM_HAVE_TLS_REGISTER      := true
 
-TARGET_BOOTLOADER_BOARD_NAME    := SC7727S
+TARGET_BOOTLOADER_BOARD_NAME    := sc7727s
 TARGET_KERNEL_CONFIG            := teamwin_j13g_defconfig
 TARGET_KERNEL_SOURCE            := kernel/samsung/j13g
 BOARD_KERNEL_CMDLINE            := console=ttyS1,115200n8
@@ -25,19 +23,15 @@ BOARD_FLASH_BLOCK_SIZE           := 1024
 TARGET_USERIMAGES_USE_EXT4       := true
 
 
-TW_THEME                           := portrait_hdpi
-TW_NO_EXFAT_FUSE                   := true
-TW_NEW_ION_HEAP                    := true
-BOARD_SUPPRESS_SECURE_ERASE        := true
-RECOVERY_SDCARD_ON_DATA            := true
-TW_NO_REBOOT_BOOTLOADER            := true
-TW_HAS_DOWNLOAD_MODE               := true
-TW_CUSTOM_CPU_TEMP_PATH            := "/sys/class/thermal/thermal_zone1/temp"
-BOARD_HAS_NO_REAL_SDCARD           := true
-RECOVERY_SDCARD_ON_DATA            := true
-BOARD_HAS_NO_MISC_PARTITION        := true
+# Recovery
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
-# display
-TW_MAX_BRIGHTNESS                   := 255
-TW_DEFAULT_BRIGHTNESS               := 162
-TW_MTP_DEVICE                       := "/dev/mtp_usb"
+# TeamWin Recovery
+TW_THEME                := portrait_hdpi
+TW_EXCLUDE_TZDATA       := false
+TW_EXCLUDE_NANO         := false
+TW_EXCLUDE_BASH         := false
+TW_INCLUDE_FB2PNG       := true
+TW_FORCE_USE_BUSYBOX    := true
+TW_INCLUDE_CRYPTO       := true
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone1/temp"
