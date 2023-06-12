@@ -33,7 +33,7 @@ jobs:
         cd ~/TWRP
         mkdir ~/.bin
         curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
-        python3 ~/.bin/repo init --depth=1 -u https://github.com/OrangeFoxRecovery/fox-6.0_manifest -b fox_6.0
+        python3 ~/.bin/repo init --depth=1 -u https://github.com/unlegacy-devices/fox-7.1_manifest.git -b twrp-7.1
         git clone --branch twrp-5.1 --single-branch https://github.com/NotNoelChannel/twrp_device_samsung_j13g.git ~/TWRP/device/samsung/j13g
         git clone --branch cm-13.0 --single-branch https://github.com/NotNoelChannel/android_kernel_samsung_j13g.git ~/TWRP/kernel/samsung/j13g
         python3 ~/.bin/repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
