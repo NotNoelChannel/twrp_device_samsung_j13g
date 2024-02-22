@@ -8,7 +8,7 @@ TARGET_ARCH_VARIANT             := armv7-a-neon
 TARGET_CPU_VARIANT              := cortex-a7
 
 TARGET_BOOTLOADER_BOARD_NAME    := sc7727s
-TARGET_KERNEL_CONFIG            := teamwin_j13g_defconfig
+TARGET_KERNEL_CONFIG            := cyanogenmod_j13g_defconfig
 TARGET_KERNEL_SOURCE            := kernel/samsung/j13g
 BOARD_KERNEL_CMDLINE            := console=ttyS1,115200n8
 BOARD_KERNEL_BASE               := 0x00000000
@@ -18,6 +18,7 @@ KERNEL_TOOLCHAIN := /opt/toolchains/arm-eabi-4.7/bin/
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 
 # fix this up by examining /proc/mtd on a running device
+BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1085440000
 BOARD_FLASH_BLOCK_SIZE           := 1024
@@ -29,10 +30,13 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
 # TeamWin Recovery
 TW_THEME                := portrait_hdpi
-TW_EXCLUDE_TZDATA       := false
-TW_EXCLUDE_NANO         := false
+TW_EXCLUDE_TZDATA       := true
+TW_EXCLUDE_NANO         := true
 TW_EXCLUDE_BASH         := false
 TW_INCLUDE_FB2PNG       := true
 TW_FORCE_USE_BUSYBOX    := true
 TW_INCLUDE_CRYPTO       := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone1/temp"
+TW_MAX_BRIGHTNESS 		:= 255
+TW_DEVICE_VERSION 		:= 0_notnoelchannel
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"

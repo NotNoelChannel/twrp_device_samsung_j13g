@@ -12,10 +12,6 @@
 /data           ext4      /dev/block/platform/sprd-sdhci.3/by-name/userdata    flags=display="Data";length=-16384;backup=1;canbewiped;wipeingui;wipeduringfactoryreset
 /cache          ext4      /dev/block/platform/sprd-sdhci.3/by-name/CSC         flags=display="Cache";canbewiped;wipeingui;wipeduringfactoryreset
 
-# Samsung Specific
-/preload        ext4      /dev/block/platform/sprd-sdhci.3/by-name/HIDDEN      flags=display="Preload";wipeingui;backup=1
-/productinfo    ext4      /dev/block/platform/sprd-sdhci.3/by-name/prodnv      flags=display="Product Info";backup=1
-
 # External Media
 /external_sd    vfat      /dev/block/mmcblk1p1                                 flags=display="Micro SDcard";storage;wipeingui;removable
 /usb-otg        vfat      /dev/block/sda1         /dev/block/sda               flags=display="USB-OTG";storage;wipeingui;removable

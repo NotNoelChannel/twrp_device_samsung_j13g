@@ -30,5 +30,5 @@ $(call inherit-product, vendor/omni/config/common.mk)
 PRODUCT_NAME := omni_j13g
 PRODUCT_DEVICE := j13g
 PRODUCT_BRAND := samsung
-PRODUCT_MODEL := Samsung Galaxy J1 (2015)
+PRODUCT_MODEL := Samsung Galaxy J1
 PRODUCT_MANUFACTURER := samsung
